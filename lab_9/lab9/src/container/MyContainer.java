@@ -1,10 +1,7 @@
 package container;
 
 import java.io.*;
-import java.util.Date;
-import java.util.Iterator;
-import java.util.NoSuchElementException;
-import java.util.Scanner;
+import java.util.*;
 
 public class MyContainer implements Container, Sortable,
 		Iterable<String>, Serializable{
@@ -113,10 +110,7 @@ public class MyContainer implements Container, Sortable,
 	}
 
 	private void realloc(){
-		String[] buf = data;
-		data = new String[size == 0 ? 1 : size * 2];
-		for(int i = 0; i < Math.min(buf.length, data.length); ++i)
-			data[i] = buf[i];
+		data = Arrays.copyOf(data, size * 2);
 	}
 
 	public void marshal(File f){
