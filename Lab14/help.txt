@@ -1,0 +1,10 @@
+<command> <Filename>
+    -save
+    -read
+    -cd <Dirname> = enter directory
+    -cd .. = go to the parent dir
+<command> <params...>
+    -a OR -add <passport data(dd.MM.yyyy)> <accommodation data(dd.MM.yyyy)> <checkout data> <roomClass> <places> <reason>
+    -r OR -remove <index in list>
+    -s OR -showAll
+    -dir = show files in directory
